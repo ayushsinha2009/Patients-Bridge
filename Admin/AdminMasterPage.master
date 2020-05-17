@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Admin_AdminMasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Panel - Dashboard </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-12" style="padding: 0px;">
+                    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="#" style="color:white; font-weight:bold; " >Admin Panel</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active" >
+                                    <a class="nav-link" style="color:white;" href="#"> <asp:Label runat="server" ID="username"></asp:Label> </a>
+                                </li>
+                                <!--
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li> -->
+                            </ul>
+                            <div class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2" style="padding:0px;">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link active" href="#" style="border-radius:0px;" > <i class="fas fa-home"></i> Dashboard</a>
+                        <a class="nav-link" href="ManageAllPatients.aspx" style="border-radius:0px;" > <i class="fas fa-users"></i> Manage All Petient</a>
+                        <a class="nav-link" href="ManageAppointments.aspx" style="border-radius:0px;" > <i class="fas fa-table"></i> Manage Appointments</a>
+                        <a class="nav-link" href="ManageDoctors.aspx" style="border-radius:0px;" > <i class="fas fa-user-md"></i> Manage Doctors</a>
+                        <a class="nav-link" href="ManageContacts.aspx" style="border-radius:0px;" > <i class="fas fa-user-md"></i> Manage Contacts</a>
+                        <a class="nav-link" href="ManageNewsLettersSubscribers.aspx" style="border-radius:0px;" > <i class="fas fa-user-md"></i> Manage Subscribers</a>
+                        <a class="nav-link" href="Profile.aspx" style="border-radius:0px;" > <i class="fas fa-user"></i> View Profile</a>
+                        <a class="nav-link" href="ChangePassword.aspx" style="border-radius:0px;" > <i class="fas fa-key"></i> Change Password</a>
+                        <asp:LinkButton runat="server" CssClass="nav-link" OnClick="Unnamed_Click" ID="lgut" style="border-radius:0px;" > <i class="fas fa-sign-out-alt"></i> Logout</asp:LinkButton>
+                    </nav>
+                </div>
+                <div class="col-sm-10">
+                      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
